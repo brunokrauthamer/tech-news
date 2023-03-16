@@ -77,7 +77,8 @@ def scrape_news(html_content):
 def get_tech_news(amount):
     if (amount % 12) != 0:
         number_of_pages = int((amount - (amount % 12)) / 12 + 1)
-    else: number_of_pages = int(amount / 12)
+    else:
+        number_of_pages = int(amount / 12)
     number_of_links_last_page = amount - 12 * (number_of_pages - 1)
     links = []
     page_url = 'https://blog.betrybe.com'
@@ -94,7 +95,3 @@ def get_tech_news(amount):
         news_info.append(new_info)
     create_news(news_info)
     return news_info
-
-    
-
-    
